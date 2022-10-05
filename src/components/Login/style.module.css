@@ -1,0 +1,12 @@
+.wrapperLogin {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+}
