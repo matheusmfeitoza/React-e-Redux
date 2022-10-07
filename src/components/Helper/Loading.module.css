@@ -1,0 +1,23 @@
+.loading {
+  display: block;
+  margin: 0 auto;
+  height: 2px;
+  background-color: black;
+  max-width: 80px;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+  transform: translateX(-70px);
+  animation: loading 0.8s forwards infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: translateX(90px);
+  }
+}

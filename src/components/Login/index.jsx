@@ -8,7 +8,7 @@ export const Login = () => {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state?.tokenReducer);
+  const { data } = useSelector((state) => state.tokenReducer);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -16,7 +16,9 @@ export const Login = () => {
   };
 
   React.useEffect(() => {
-    if (data) dispatch(autoLogin(data.token));
+    if (data && data.token != null) {
+      dispatch(autoLogin(data.token));
+    }
   }, [data, dispatch]);
   return (
     <form onSubmit={handleSubmit} className={style.formLogin}>

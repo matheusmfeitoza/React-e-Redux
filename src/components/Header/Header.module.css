@@ -8,10 +8,12 @@
 }
 .btn {
   display: block;
-  width: 8px;
-  height: 8px;
+  padding: 0;
+  margin: 0;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  border: none;
+  border: 2px solid;
   box-sizing: border-box;
   cursor: pointer;
   background-color: white;

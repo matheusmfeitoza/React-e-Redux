@@ -1,11 +1,11 @@
+import Content from "./components/Content/Content";
 import Header from "./components/Header/Header";
-import { Login } from "./components/Login";
 import "./Global.css";
 function App() {
   return (
     <div className="container">
       <Header />
-      <Login />
+      <Content />
     </div>
   );
 }
