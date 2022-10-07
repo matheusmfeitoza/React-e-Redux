@@ -1,0 +1,18 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+.title {
+  font-family: "Courier New", Courier, monospace;
+}
+.btn {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: white;
+}

@@ -1,0 +1,41 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.welcome {
+  display: block;
+}
+
+.spn::before {
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: green;
+}
+
+.spnOn::before {
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: gray;
+}
+
+.btn {
+  display: block;
+  margin: 0.875rem auto;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}

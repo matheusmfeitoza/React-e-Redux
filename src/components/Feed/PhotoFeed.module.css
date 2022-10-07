@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 0.375rem;
+  background-color: #eee;
+  border-radius: 0.375rem;
+}
+.infos {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0.275rem;
+}
+.img {
+  max-width: 80px;
+  border-radius: 0.375rem;
+}
+
+.spn {
+  font-size: x-large;
+  margin-left: 0.875rem;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000;
+  font-weight: bold;
+}
+.acessos {
+  color: rgba(107, 106, 106, 0.562);
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1.5;
+}
