@@ -27,6 +27,9 @@ const token = createAsyncFetch({
         };
       },
     },
+    eraseData(state) {
+      state.data = null;
+    },
   },
   configData: (user) => ({
     url: "https://dogsapi.origamid.dev/json/jwt-auth/v1/token",
@@ -39,5 +42,7 @@ const token = createAsyncFetch({
     },
   }),
 });
+
+export const { eraseData } = token.actions;
 export const tokenReducer = token.reducer;
 export const fetchToken = token.fetchData;

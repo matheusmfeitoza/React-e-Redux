@@ -8,8 +8,10 @@ const user = createAsyncFetch({
         state.loading = false;
         state.data = action.payload;
         state.error = null;
-        state.isLogged = true;
       },
+    },
+    eraseUser(state) {
+      state.data = null;
     },
   },
   configData: (token) => ({
@@ -22,7 +24,6 @@ const user = createAsyncFetch({
     },
   }),
 });
-export const logout = user.LogoutAll;
+export const { eraseUser } = user.actions;
 export const userReducer = user.reducer;
 export const fetchUser = user.fetchData;
-export const { fetchLogout } = user.actions;

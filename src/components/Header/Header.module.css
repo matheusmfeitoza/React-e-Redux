@@ -16,3 +16,10 @@
   cursor: pointer;
   background-color: white;
 }
+
+.loading {
+  background-color: orange;
+}
+.logged {
+  background-color: greenyellow;
+}

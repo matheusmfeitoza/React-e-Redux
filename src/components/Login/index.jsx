@@ -1,13 +1,25 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { login, autoLogin } from "../../Store/helper/Login";
 import style from "./style.module.css";
 
 export const Login = () => {
   //Hooks e ações do redux
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const dispatch = useDispatch();
+  const { data } = useSelector((state) => state?.tokenReducer);
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(login({ username, password }));
+  };
+
+  React.useEffect(() => {
+    if (data) dispatch(autoLogin(data.token));
+  }, [data, dispatch]);
   return (
-    <form className={style.formLogin}>
+    <form onSubmit={handleSubmit} className={style.formLogin}>
       <label htmlFor="username" className={style.label}>
         Usuário
       </label>

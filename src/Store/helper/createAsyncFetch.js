@@ -17,7 +17,6 @@ const createAsyncFetch = (config) => {
       loading: false,
       data: null,
       error: null,
-      isLogged: false,
       ...config.initialState,
     },
     reducers: {
@@ -36,15 +35,9 @@ const createAsyncFetch = (config) => {
       },
       ...config.reducers,
     },
-    fetchLogout(state) {
-      state.loading = false;
-      state.data = null;
-      state.error = null;
-      state.isLogged = false;
-    },
   });
 
-  const { fetchError, fetchStarted, fetchSuccess, fetchLogout } = slice.actions;
+  const { fetchError, fetchStarted, fetchSuccess } = slice.actions;
 
   const fetchData = (payload) => async (dispatch) => {
     try {
@@ -58,11 +51,7 @@ const createAsyncFetch = (config) => {
     }
   };
 
-  const LogoutAll = () => async (dispatch) => {
-    await dispatch(fetchLogout);
-  };
-
-  return { ...slice, fetchData, LogoutAll };
+  return { ...slice, fetchData };
 };
 
 export default createAsyncFetch;
