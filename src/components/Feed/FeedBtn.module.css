@@ -1,0 +1,11 @@
+.btn {
+  display: block;
+  margin: 0.875rem auto;
+  border: 2px solid;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}

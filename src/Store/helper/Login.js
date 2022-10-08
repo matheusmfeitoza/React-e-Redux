@@ -13,8 +13,10 @@ export const login = (user) => async (dispatch) => {
   }
 };
 
-export const autoLogin = (token) => async (dispatch) => {
+export const autoLogin = () => async (dispatch, getState) => {
   try {
+    const state = getState();
+    const { token } = state?.tokenReducer?.data;
     await dispatch(fetchUser(token));
   } catch (error) {
     console.error(error);

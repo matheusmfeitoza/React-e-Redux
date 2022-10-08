@@ -9,7 +9,8 @@ const Content = () => {
   const loading = tokenReducer.loading || userReducer.loading;
   const { data } = userReducer;
   if (loading) return <Loading />;
-  return <section>{data ? <Feed /> : <Login />}</section>;
+  if (data) return <Feed />;
+  else return <Login />;
 };
 
 export default Content;

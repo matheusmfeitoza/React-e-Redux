@@ -4,8 +4,7 @@ import styles from "./Header.module.css";
 import { logout } from "../../Store/helper/Logout";
 const Header = () => {
   const dispatch = useDispatch();
-  const handleClick = (event) => {
-    event.preventDefault();
+  const handleClick = () => {
     dispatch(logout());
   };
   const { userReducer, tokenReducer } = useSelector((state) => state);
